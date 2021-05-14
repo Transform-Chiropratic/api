@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Transform-Chiropratic/apiserver/auth"
+	"github.com/Transform-Chiropratic/api/server/auth"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/jwtauth"
 )

@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	db "github.com/Transform-Chiropratic/apidb"
+	"github.com/Transform-Chiropratic/api/db"
 	"github.com/pressly/goose"
 )
 

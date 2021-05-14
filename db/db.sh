@@ -10,17 +10,17 @@ function usage() {
 function create() {
   echo "CREATE USER postgres SUPERUSER;" | psql -h127.0.0.1 || :
   cat <<EOF | psql -h127.0.0.1 -U postgres
-    CREATE USER template WITH PASSWORD 'template';
-    CREATE DATABASE $database ENCODING 'UTF-8' LC_COLLATE='en_US.UTF-8' LC_CTYPE='en_US.UTF-8' TEMPLATE template0 OWNER template;
+    CREATE USER transform_chiropratic WITH PASSWORD 'supersecret';
+    CREATE DATABASE $database ENCODING 'UTF-8' LC_COLLATE='en_US.UTF-8' LC_CTYPE='en_US.UTF-8' TEMPLATE template0 OWNER transform_chiropratic;
 EOF
 
   cat <<EOF | psql -h127.0.0.1 -U postgres $database
     CREATE EXTENSION IF NOT EXISTS pg_trgm;
     CREATE EXTENSION IF NOT EXISTS plpgsql;
-    GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO template;
-    GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO template;
-    ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO template;
-    ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON SEQUENCES TO template;
+    GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO transform_chiropratic;
+    GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO transform_chiropratic;
+    ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO transform_chiropratic;
+    ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON SEQUENCES TO transform_chiropratic;
 EOF
 }
 

@@ -5,9 +5,9 @@ CONFIG := $$PWD/config/api.conf
 UPPER_DB_LOG=DEBUG
 
 all:
-	@echo "******************************"
-	@echo "** Template API build tool  **"
-	@echo "******************************"
+	@echo "*******************************"
+	@echo "** Transform Chiropratic API **"
+	@echo "*******************************"
 	@echo "make <cmd>"
 	@echo ""
 	@echo "commands:"
@@ -60,17 +60,17 @@ db-migrate:
 	./bin/migrate create $${op}_$${type}_$${target} sql
 
 db-reset:
-	@./db/db.sh reset template
+	@./db/db.sh reset transform_chiropratic
 	@./bin/migrate up
 
 db-fix:
 	@./bin/migrate fix
 
 db-create:
-	@./db/db.sh create template
+	@./db/db.sh create transform_chiropratic
 
 db-drop:
-	@./db/db.sh drop template 
+	@./db/db.sh drop transform_chiropratic 
 
 conf:
 	[ -f config/api.conf ] || cp config/api.develop.conf config/api.conf

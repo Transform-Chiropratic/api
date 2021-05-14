@@ -5,9 +5,9 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/Transform-Chiropratic/apiserver/api"
+	"github.com/Transform-Chiropratic/api/data"
+	"github.com/Transform-Chiropratic/api/server/api"
 	"github.com/go-chi/jwtauth"
-	"github.com/jesseokeya/go-rest-api-template/data"
 	"github.com/lestrrat-go/jwx/jwt"
 	"github.com/upper/db/v4"
 )
