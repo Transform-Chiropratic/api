@@ -8,13 +8,13 @@ function usage() {
 }
 
 function create() {
-  echo "CREATE USER postgres SUPERUSER;" | psql -h127.0.0.1 || :
-  cat <<EOF | psql -h127.0.0.1 -U postgres
+  echo "CREATE USER jesseokeya SUPERUSER;" | psql -h127.0.0.1 || :
+  cat <<EOF | psql -h127.0.0.1 -U jesseokeya
     CREATE USER transform_chiropratic WITH PASSWORD 'supersecret';
     CREATE DATABASE $database ENCODING 'UTF-8' LC_COLLATE='en_US.UTF-8' LC_CTYPE='en_US.UTF-8' TEMPLATE template0 OWNER transform_chiropratic;
 EOF
 
-  cat <<EOF | psql -h127.0.0.1 -U postgres $database
+  cat <<EOF | psql -h127.0.0.1 -U jesseokeya $database
     CREATE EXTENSION IF NOT EXISTS pg_trgm;
     CREATE EXTENSION IF NOT EXISTS plpgsql;
     GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO transform_chiropratic;
@@ -25,7 +25,7 @@ EOF
 }
 
 function drop() {
-  cat <<EOF | psql -h127.0.0.1 -U postgres
+  cat <<EOF | psql -h127.0.0.1 -U jesseokeya
     SELECT pg_terminate_backend(pg_stat_activity.pid)
     FROM pg_stat_activity
     WHERE pg_stat_activity.datname = '$database' AND pid <> pg_backend_pid();

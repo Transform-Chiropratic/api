@@ -23,4 +23,5 @@ require (
 	github.com/upper/db/v4 v4.1.0
 	github.com/zenazn/goji v1.0.1
 	golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad
+	golang.org/x/sys v0.0.0-20210514084401-e8d321eab015 // indirect
 )

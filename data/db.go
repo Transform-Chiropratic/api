@@ -60,6 +60,8 @@ func NewDB(conf DBConf) (*Database, error) {
 	}
 
 	db.User = Users(db.Session)
+	db.OAuthToken = OAuthTokens(db.Session)
+	db.OAuthClient = OAuthClients(db.Session)
 
 	// global instance for access across modules
 	DB = db

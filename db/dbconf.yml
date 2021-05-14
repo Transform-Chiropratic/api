@@ -1,9 +1,9 @@
 testing:
   driver: postgres
-  open: user=template dbname=template_tests sslmode=disable
+  open: user=transform_chiropratic host=localhost dbname=transform_chiropratic password=supersecret sslmode=disable
 development:
   driver: postgres
-  open: user=template dbname=template sslmode=disable
+  open: user=transform_chiropratic host=localhost dbname=transform_chiropratic password=supersecret sslmode=disable
 staging:
   driver: postgres
   open: user=template password=template host=localhost dbname=template sslmode=require
