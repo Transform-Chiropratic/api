@@ -73,7 +73,7 @@ db-drop:
 	@./db/db.sh drop transform_chiropratic 
 
 conf:
-	[ -f config/api.conf ] || cp config/api.develop.conf config/api.conf
+	[ -f config/api.conf ] || cp config/api.staging.conf config/api.conf
 
 run: conf
 	@(export CONFIG=${CONFIG}; air)
