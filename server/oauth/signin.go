@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/Transform-Chiropratic/api/data/presenter"
-	"github.com/Transform-Chiropratic/api/server/api"
-	"github.com/Transform-Chiropratic/api/server/auth"
+	"github.com/Transform-Chiropratic/apidata/presenter"
+	"github.com/Transform-Chiropratic/apiserver/api"
+	"github.com/Transform-Chiropratic/apiserver/auth"
 	"github.com/jesseokeya/go-rest-api-template/data"
 	"github.com/upper/db/v4"
 )

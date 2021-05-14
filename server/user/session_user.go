@@ -4,9 +4,9 @@ import (
 	"errors"
 	"net/http"
 
-	data "github.com/Transform-Chiropratic/api/data"
-	"github.com/Transform-Chiropratic/api/data/presenter"
-	"github.com/Transform-Chiropratic/api/server/api"
+	data "github.com/Transform-Chiropratic/apidata"
+	"github.com/Transform-Chiropratic/apidata/presenter"
+	"github.com/Transform-Chiropratic/apiserver/api"
 	"github.com/go-chi/render"
 )
 

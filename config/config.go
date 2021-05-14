@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	data "github.com/Transform-Chiropratic/api/data"
-	"github.com/Transform-Chiropratic/api/lib/connect"
-	"github.com/Transform-Chiropratic/api/lib/session"
+	data "github.com/Transform-Chiropratic/apidata"
+	"github.com/Transform-Chiropratic/apilib/connect"
+	"github.com/Transform-Chiropratic/apilib/session"
 	"github.com/burntsushi/toml"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/pkgerrors"
