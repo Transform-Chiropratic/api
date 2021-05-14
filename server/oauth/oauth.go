@@ -7,15 +7,15 @@ import (
 	"net/http"
 	"strconv"
 
+	data "github.com/Transform-Chiropratic/api/data"
+	"github.com/Transform-Chiropratic/api/data/presenter"
+	"github.com/Transform-Chiropratic/api/lib/session"
+	"github.com/Transform-Chiropratic/api/server/api"
 	"github.com/go-chi/jwtauth"
 	"github.com/go-chi/render"
 	"github.com/go-oauth2/oauth2/v4/errors"
 	"github.com/go-oauth2/oauth2/v4/manage"
 	"github.com/go-oauth2/oauth2/v4/server"
-	"github.com/jesseokeya/go-rest-api-template/data"
-	"github.com/jesseokeya/go-rest-api-template/data/presenter"
-	"github.com/jesseokeya/go-rest-api-template/lib/session"
-	"github.com/jesseokeya/go-rest-api-template/server/api"
 )
 
 type OAuth struct {

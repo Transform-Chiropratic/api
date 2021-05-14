@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/jesseokeya/go-rest-api-template/db"
+	db "github.com/Transform-Chiropratic/api/db"
 	"github.com/pressly/goose"
 )
 

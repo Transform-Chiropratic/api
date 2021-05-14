@@ -4,10 +4,10 @@ import (
 	"errors"
 	"net/http"
 
+	data "github.com/Transform-Chiropratic/api/data"
+	"github.com/Transform-Chiropratic/api/data/presenter"
+	"github.com/Transform-Chiropratic/api/server/api"
 	"github.com/go-chi/render"
-	"github.com/jesseokeya/go-rest-api-template/data"
-	"github.com/jesseokeya/go-rest-api-template/data/presenter"
-	"github.com/jesseokeya/go-rest-api-template/server/api"
 )
 
 var (

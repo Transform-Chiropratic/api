@@ -1,8 +1,8 @@
-module github.com/jesseokeya/go-rest-api-template
+module github.com/Transform-Chiropratic/api
 
 go 1.16
 
-// replace github.com/jesseokeya/go-rest-api-template => /Users/jesseokeya/go/src/github.com/jesseokeya/go-rest-api-template
+replace github.com/Transform-Chiropratic/api => /Users/jesseokeya/go/src/github.com/api
 
 require (
 	github.com/burntsushi/toml v0.3.1

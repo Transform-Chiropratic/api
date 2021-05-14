@@ -4,15 +4,15 @@ import (
 	"net/http"
 	"os"
 
+	data "github.com/Transform-Chiropratic/api/data"
+	"github.com/Transform-Chiropratic/api/lib/session"
+	"github.com/Transform-Chiropratic/api/server/api"
+	"github.com/Transform-Chiropratic/api/server/auth"
+	"github.com/Transform-Chiropratic/api/server/oauth"
+	"github.com/Transform-Chiropratic/api/server/user"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/jwtauth"
-	"github.com/jesseokeya/go-rest-api-template/data"
-	"github.com/jesseokeya/go-rest-api-template/lib/session"
-	"github.com/jesseokeya/go-rest-api-template/server/api"
-	"github.com/jesseokeya/go-rest-api-template/server/auth"
-	"github.com/jesseokeya/go-rest-api-template/server/oauth"
-	"github.com/jesseokeya/go-rest-api-template/server/user"
 	"github.com/rs/zerolog"
 )
 

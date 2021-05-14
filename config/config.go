@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
+	data "github.com/Transform-Chiropratic/api/data"
+	"github.com/Transform-Chiropratic/api/lib/connect"
+	"github.com/Transform-Chiropratic/api/lib/session"
 	"github.com/burntsushi/toml"
-	"github.com/jesseokeya/go-rest-api-template/data"
-	"github.com/jesseokeya/go-rest-api-template/lib/connect"
-	"github.com/jesseokeya/go-rest-api-template/lib/session"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/pkgerrors"
 )
